@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <div class="wrapper">
+        <form action="" class="noselect">
+            <div class="appTitle">
+                <h1>Comment Finder</h1>
+                <img src="icons/flask.gif" alt="" srcset="">
+            </div>
+            <div class="radioBoxes">
+                <label class="radioBox">
+                    <input type="radio" name="species" id="dog" value="dog" required="required" checked="checked">
+                    <img src="icons/dog-icon.svg" alt="" draggable="false">
+                </label>
+                <label class="radioBox">
+                    <input type="radio" name="species" id="cat" value="cat" required="required">
+                    <img src="icons/cat-icon.svg" alt="" draggable="false">
+                </label>
+            </div>
+            <div>
+                <label for="t4">T4</label>
+                <input type="number" name="t4" id="t4">
+                <p class="norm">1.5 - 4.5</p>
+            </div>
+            <div>
+                <label for="ft4">fT4</label>
+                <input type="number" name="ft4" id="ft4">
+                <p class="norm">0.6 - 3.7</p>
+            </div>
+            <div>
+                <label for="tsh">TSH</label>
+                <input type="number" name="tsh" id="tsh">
+                <p class="norm">0.001 - 0.3</p>
+            </div>
+            <div>
+                <label for="b12">B12</label>
+                <input type="number" name="b12" id="b12">
+                <p class="norm">900 - 2800</p>
+            </div>
+            <div>
+                <label for="fol">FOL</label>
+                <input type="number" name="fol" id="fol">
+                <p class="norm">7.5 - 17.5</p>
+            </div>
+            <div class="buttons noselect">
+                <button class="button print" type="submit" id="submit"> <span>FIND</span>
+                    <div class="icon">
+                        <img src="icons/right-arrow-icon.svg" alt="" draggable="false">
+                    </div>
+                </button>
+                <button class="button reset" type="reset" id="reset"><span>RESET</span>
+                    <div class="icon">
+                        <img src="icons/clear-icon.svg" alt="" draggable="false">
+                    </div>
+                </button>
+            </div>
+        </form>
+        <section class="results">
+        <div class="resultsT">
+            <h2 class="noselect titleRuleBox">T4 fT4 TSH</h2>
+            <p class="resultTPara"></p>
+            <button class="copyBtnT button noselect"><span>COPY</span>
+                <div class="icon">
+                    <img src="icons/copy-icon.svg" alt="" draggable="false">
+                </div>
+            </button>
+        </div>
+        <div class="resultsB">
+            <h2 class="noselect titleRuleBox">B12 FOL</h2>
+            <p class="resultBPara"></p>
+            <button class="copyBtnB button noselect"><span>COPY</span>
+                <div class="icon">
+                    <img src="icons/copy-icon.svg" alt="" draggable="false">
+                </div>
+            </button>
+        </div>
+        </section>
+    </div>
+    <div class="copyAlertHide" id="copybox"></div>
+    <script src="src/rules.js"></script>
+    <script src="src/ap.js"></script>
+    <!-- <script src="src/newrules.js"></script> -->
+</body>
+</html>
